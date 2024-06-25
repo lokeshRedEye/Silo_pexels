@@ -1,0 +1,79 @@
+<!-- Footer -->
+<div class="container-fluid" id="footer"  style="background-color:black; color: #fff; padding: 50px 0;">
+    <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                <img src="SILO.jpg" width="100px" height="100px" style="border-radius: 50%;" alt="">
+            </a>
+            <p>© 2024</p>
+        </div>
+
+        <div class="col mb-3"></div>
+
+        <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">About</a></li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+</div>
+
+<!-- JavaScript and Bootstrap Scripts Remain Unchanged -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+// First event listener for '.category-link'
+document.querySelectorAll('.category-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('query').value = this.getAttribute('data-category');
+        document.getElementById('searchForm').submit();
+    });
+});
+
+// Second event listener for '.category-lin' (assuming this is a typo and should also be '.category-link')
+document.querySelectorAll('.category-lin').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('query').value = this.getAttribute('data-category');
+        
+        // Update form action to '/video'
+        document.getElementById('searchForm').action = '/video'; // Update to your '/video' route
+        
+        // Submit the form
+        document.getElementById('searchForm').submit();
+    });
+});
+});
+
+    // Smooth scroll to footer
+    document.getElementById('about-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#footer').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+</script>
+</body>
+</html>

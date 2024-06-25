@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container mt-3">
+    <div class="row">
+        <% if (photos && photos.length > 0) { %>
+            <% photos.forEach(photo => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="<%= photo.src.large %>" class="card-img-top img-fluid" alt="Photo">
+                    </div>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>    
